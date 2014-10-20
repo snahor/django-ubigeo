@@ -1,0 +1,4 @@
+Django==1.7
+py==1.4.25
+pytest==2.6.3
+pytest-django==2.7.0
