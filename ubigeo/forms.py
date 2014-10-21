@@ -4,7 +4,7 @@ from .models import Department, Province, District
 
 class DepartmentForm(forms.Form):
     department = forms.ModelChoiceField(
-        queryset=Department.objects
+        queryset=Department.objects.all()
     )
 
 
