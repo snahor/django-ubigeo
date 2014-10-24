@@ -1,5 +1,5 @@
-from .forms import UbigeoForm
-from .models import District
+from ubigeo.forms import UbigeoForm
+from ubigeo.models import District
 
 
 def test_ubigeo_form(db):
@@ -17,8 +17,6 @@ def test_ubigeo_form(db):
     data['department'] = department.pk
     form = UbigeoForm(data)
     assert form.is_valid()
-
-    print(form.cleaned_data)
 
     # arequipa
     miraflores = District.objects.filter(name='MIRAFLORES').first()
