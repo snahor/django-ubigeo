@@ -3,17 +3,17 @@ from django.conf.urls import patterns, url
 
 urlpatterns = patterns('',
     url(
-        r'^departments/',
+        r'^departments/$',
         'ubigeo.views.departments',
         name='departments'
     ),
     url(
-        r'^provinces/(\d+)',
+        r'^departments/(\d+)/provinces/$',
         'ubigeo.views.provinces',
         name='provinces'
     ),
     url(
-        r'^districts/(\d+)',
+        r'^provinces/(\d+)/districts/$',
         'ubigeo.views.districts',
         name='districts'
     ),
