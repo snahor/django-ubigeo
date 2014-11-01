@@ -1,22 +1,24 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 
 setup(
     name='django-ubigeo',
     version='0.0.1',
-    description='',
+    description='Ubigeo models, forms and views for Django',
     author='Hans Roman',
     author_email='hans@roman.pe',
     url='http://github.com/snahor/django-ubigeo',
-    packages=find_packages(include=('ubigeo',)),
     classifiers=[
+        'Environment :: Web Environment',
         'Framework :: Django',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
     ],
-    install_requires=['django>=1.7'],
+    license='MIT',
     keywords=['ubigeo', 'django'],
-    extras_require={
-        'test': ['pytest', 'pytest-django']
+    zip_safe=False,
+    packages=['ubigeo', 'ubigeo.migrations'],
+    package_data={
+        'ubigeo': ['data/*.json'],
     }
 )
